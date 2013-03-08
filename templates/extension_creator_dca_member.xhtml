@@ -1,0 +1,41 @@
+<?php echo '<?php'; ?> if (!defined('TL_ROOT')) die('You can not access this file directly!');
+
+/**
+ * @copyright  <?php echo $this->copyright; ?>
+ * @author     <?php echo $this->author; ?>
+ * @package    Backend
+ * @license    <?php echo $this->license; ?>
+ * @creator    xtmembers field editor, copyright 2009 aurealis, http://www.aurealis.de
+ * @filesource
+ */
+
+<?php echo $this->palette; ?>
+
+<?php foreach ($this->fields as $field): ?>
+$GLOBALS['TL_DCA']['tl_member']['fields']['<?php echo $field->dbFieldName; ?>'] = array
+(
+	'label'                   => &$GLOBALS['TL_LANG']['tl_member']['<?php echo $field->dbFieldName; ?>'],
+<?php if (strlen($field->default)): ?>	'default'                 => '<?php echo $field->default; ?>',<?php endif; ?>	
+	'exclude'                 => true,
+	'search'                  => true,
+	'inputType'               => '<?php echo $field->inputType; ?>',
+<?php if (strlen($field->foreignKey)): ?>	'foreignKey'            => '<?php echo $field->foreignKey; ?>',<?php endif; ?>	
+<?php if ($field->hasOptions): ?>	'options'                 => <?php echo $field->options; ?>,<?php endif; ?>	
+	'eval'                    => array(<?php echo $field->eval; ?>),
+	'sql'                     => "<?php echo $field->dbFieldType; ?>"
+);
+<?php endforeach; ?>
+
+/**
+ * Class tl_member_<?php echo $this->extension . "\n"; ?>
+ *
+ * Provide miscellaneous methods that are used by the data configuration array.
+ * @copyright  <?php echo $this->copyright; ?>
+ * @author     <?php echo $this->author; ?>
+ * @package    Controller
+ */
+class tl_member_<?php echo $this->extension; ?> extends tl_member
+{
+}
+
+<?php echo '?>'; ?>

@@ -1,0 +1,60 @@
+
+<div id="tl_buttons">
+<a href="<?php echo $this->hrefBack; ?>" class="header_back" title="<?php echo $this->goBack; ?>" accesskey="b" onclick="Backend.getScrollOffset();"><?php echo $this->goBack; ?></a>
+</div>
+
+<h2 class="sub_headline"><?php echo $this->headline; ?></h2>
+
+<form action="<?php echo $this->request; ?>" id="tl_export_memberfields" class="tl_form" method="post">
+<div class="tl_formbody_edit">
+<input type="hidden" name="FORM_SUBMIT" value="tl_export_memberfields" />
+<input type="hidden" name="REQUEST_TOKEN" value="<?php echo REQUEST_TOKEN; ?>" />
+
+	<fieldset id="export_memberfields" class="tl_box">
+	<div class="w50">
+  <h3><?php echo $this->extensionName->generateLabel(); ?></h3>
+  <?php echo $this->extensionName->generateWithError(); if ($this->extensionName->help): ?> 
+  <p class="tl_help tl_tip"><?php echo $this->extensionName->help; ?></p><?php endif; ?> 
+	</div>
+
+	<div class="w50">
+  <h3><?php echo $this->deliverAsZip->generateLabel(); ?></h3>
+  <?php echo $this->deliverAsZip->generateWithError(); if ($this->deliverAsZip->help): ?> 
+  <p class="tl_help tl_tip"><?php echo $this->deliverAsZip->help; ?></p><?php endif; ?> 
+	</div>
+	</fieldset>
+
+	<fieldset id="export_memberfields_list" class="tl_box">
+	<div class="full">
+  <h3><?php echo $this->availableFields->generateLabel(); ?></h3>
+  <?php echo $this->availableFields->generateWithError(); if ($this->availableFields->help): ?> 
+  <p class="tl_help tl_tip"><?php echo $this->availableFields->help; ?></p><?php endif; ?> 
+	</div>
+	</fieldset>
+
+	<fieldset id="export_memberfields_authorinfo" class="tl_box">
+	<div class="w50 clr">
+  <h3><?php echo $this->author->generateLabel(); ?></h3>
+  <?php echo $this->author->generateWithError(); if ($this->author->help): ?> 
+  <p class="tl_help tl_tip"><?php echo $this->author->help; ?></p><?php endif; ?> 
+	</div>
+
+	<div class="w50">
+  <h3><?php echo $this->copyright->generateLabel(); ?></h3>
+  <?php echo $this->copyright->generateWithError(); if ($this->copyright->help): ?> 
+  <p class="tl_help tl_tip"><?php echo $this->copyright->help; ?></p><?php endif; ?> 
+	</div>
+
+	<div class="w50">
+  <h3><?php echo $this->license->generateLabel(); ?></h3>
+  <?php echo $this->license->generateWithError(); if ($this->license->help): ?> 
+  <p class="tl_help tl_tip"><?php echo $this->license->help; ?></p><?php endif; ?> 
+	</div>
+	</fieldset>
+</div>
+<div class="tl_formbody_submit">
+	<div class="tl_submit_container">
+<input type="submit" name="import" id="save" class="tl_submit" alt="<?php echo $this->submit; ?>" accesskey="s" value="<?php echo $this->submit; ?>" />
+	</div>
+</div>
+</form>

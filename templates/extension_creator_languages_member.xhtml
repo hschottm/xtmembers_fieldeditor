@@ -1,0 +1,34 @@
+<?php echo '<?php'; ?>
+
+/**
+ * @copyright  <?php echo $this->copyright; ?>
+ * @author     <?php echo $this->author; ?>
+ * @package    Backend
+ * @license    <?php echo $this->license; ?>
+ * @creator    xtmembers field editor, copyright 2009 aurealis, http://www.aurealis.de
+ * @filesource
+ */
+
+/**
+ * Fields
+ */
+<?php foreach ($this->langentries as $langentry): ?>
+$GLOBALS['TL_LANG']['tl_member']['<?php echo $langentry['name']; ?>']      = array('<?php echo $langentry['title']; ?>', '<?php echo $langentry['description']; ?>');
+<?php endforeach; ?>
+
+/**
+ * Legends
+ */
+<?php foreach ($this->legends as $legend): ?>
+$GLOBALS['TL_LANG']['tl_member']['<?php echo $legend['name']; ?>']      = '<?php echo $legend['title']; ?>';
+<?php endforeach; ?>
+
+<?php if (count($this->selectentries)): ?>
+/**
+ * Combobox select values
+ */
+<?php foreach ($this->selectentries as $value): ?>
+<?php echo $value; ?>
+<?php endforeach; ?>
+<?php endif; ?>
+<?php echo '?>'; ?>

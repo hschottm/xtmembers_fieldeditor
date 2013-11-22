@@ -58,10 +58,6 @@ class MemberFieldExport extends \Backend
 		$configFile->write($config->parse());
 		$configFile->close();
 
-		$htaccessFile = new File($extensionPath . "/config/.htaccess");
-		$htaccessFile->write("order deny,allow\ndeny from all\n");
-		$htaccessFile->close();
-
 		$autoloadIniFile = new File($extensionPath . "/config/autoload.ini");
 		$autoloadIniFile->write(";;\n; Configure what you want the autoload creator to register\n;;\nregister_namespaces = true\nregister_classes    = true\nregister_templates  = true\n");
 		$autoloadIniFile->close();

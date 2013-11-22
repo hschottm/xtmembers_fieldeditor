@@ -210,7 +210,11 @@ class MemberField
 				{
 					if ($this->dataset['multiple']) array_push($eval, "'multiple' => true");
 				} 
-				if ($this->dataset['showdatepicker']) array_push($eval, "'datepicker' => true");
+				if ($this->dataset['showdatepicker'])
+				{
+					array_push($eval, "'datepicker' => true");
+					array_push($eval, "'rgxp'=>'date'");
+				} 
 				if ($this->dataset['preserveTags']) array_push($eval, "'preserveTags' => true");
 				if ($this->dataset['decodeEntities']) array_push($eval, "'decodeEntities' => true");
 				if ($this->dataset['doNotSaveEmpty']) array_push($eval, "'doNotSaveEmpty' => true");

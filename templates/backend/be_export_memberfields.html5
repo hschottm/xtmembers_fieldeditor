@@ -26,7 +26,6 @@
 
 	<fieldset id="export_memberfields_list" class="tl_box">
 	<div class="full">
-  <h3><?php echo $this->availableFields->generateLabel(); ?></h3>
   <?php echo $this->availableFields->generateWithError(); if ($this->availableFields->help): ?> 
   <p class="tl_help tl_tip"><?php echo $this->availableFields->help; ?></p><?php endif; ?> 
 	</div>

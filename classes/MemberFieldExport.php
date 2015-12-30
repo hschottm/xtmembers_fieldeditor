@@ -1,10 +1,11 @@
 <?php
 
 /**
- * @copyright  Helmut Schottmüller 2009-2013
- * @author     Helmut Schottmüller <https://github.com/hschottm>
- * @package    CalendarImport
- * @license    LGPL
+ * Contao Open Source CMS
+ *
+ * Copyright (c) 2005-2015 Leo Feyer
+ *
+ * @license LGPL-3.0+
  */
 
 namespace Contao;
@@ -13,7 +14,7 @@ namespace Contao;
  * Class MemberFieldExport
  *
  * Provide methods to handle import and export of member data.
- * @copyright  Helmut Schottmüller 2009-2013
+ * @copyright  Helmut Schottmüller 2009-2015
  * @author     Helmut Schottmüller <https://github.com/hschottm>
  * @package    Controller
  */
@@ -24,6 +25,7 @@ class MemberFieldExport extends \Backend
 	protected function createExtension($extension, $extensionPath, $availableFields, $author, $copyright, $license)
 	{
 		$this->loadDataContainer('tl_member');
+
 		// remove an existing folder of the same name
 		if (strlen($extensionPath) && @file_exists(TL_ROOT . "/" . $extensionPath))
 		{
@@ -168,7 +170,6 @@ class MemberFieldExport extends \Backend
 					// send the zip file
 					$save = $GLOBALS['TL_CONFIG']['uploadPath'];
 					$GLOBALS['TL_CONFIG']['uploadPath'] = 'system/tmp';
-					$this->Session->set('memberfieldexport_exportfile', 'system/tmp/' . $extensionName . '.zip');
 					$this->sendFileToBrowser('system/tmp/' . $extensionName . '.zip');
 					$GLOBALS['TL_CONFIG']['uploadPath'] = $save;
 				}
@@ -182,15 +183,6 @@ class MemberFieldExport extends \Backend
 		return $this->Template->parse();
 	}
 
-	public function postDownload($strFile)
-	{
-		if (strcmp($this->Session->get('memberfieldexport_exportfile'), $strFile) == 0)
-		{
-			$this->import('Files');
-			$this->Files->delete($strFile);
-		}
-	}
-	
 	/**
 	 * Recursively delete folder
 	 * @param string

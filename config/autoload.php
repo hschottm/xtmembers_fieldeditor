@@ -2,12 +2,10 @@
 
 /**
  * Contao Open Source CMS
- * 
- * Copyright (C) 2005-2013 Leo Feyer
- * 
- * @package Xtmembers_fieldeditor
- * @link    https://contao.org
- * @license http://www.gnu.org/licenses/lgpl-3.0.html LGPL
+ *
+ * Copyright (c) 2005-2015 Leo Feyer
+ *
+ * @license LGPL-3.0+
  */
 
 
@@ -28,9 +26,9 @@ ClassLoader::addClasses(array
  */
 TemplateLoader::addFiles(array
 (
-	'be_export_memberfields'             => 'system/modules/xtmembers_fieldeditor/templates',
-	'extension_creator_autoload'         => 'system/modules/xtmembers_fieldeditor/templates',
-	'extension_creator_config'           => 'system/modules/xtmembers_fieldeditor/templates',
-	'extension_creator_dca_member'       => 'system/modules/xtmembers_fieldeditor/templates',
-	'extension_creator_languages_member' => 'system/modules/xtmembers_fieldeditor/templates',
+	'be_export_memberfields'             => 'system/modules/xtmembers_fieldeditor/templates/backend',
+	'extension_creator_autoload'         => 'system/modules/xtmembers_fieldeditor/templates/xtmembers_fieldeditor',
+	'extension_creator_config'           => 'system/modules/xtmembers_fieldeditor/templates/xtmembers_fieldeditor',
+	'extension_creator_dca_member'       => 'system/modules/xtmembers_fieldeditor/templates/xtmembers_fieldeditor',
+	'extension_creator_languages_member' => 'system/modules/xtmembers_fieldeditor/templates/xtmembers_fieldeditor',
 ));

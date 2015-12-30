@@ -1,10 +1,11 @@
 <?php
 
 /**
- * @copyright  Helmut Schottmüller 2009-2013
- * @author     Helmut Schottmüller <https://github.com/hschottm>
- * @package    xtmembers_fieldeditor
- * @license    LGPL
+ * Contao Open Source CMS
+ *
+ * Copyright (c) 2005-2015 Leo Feyer
+ *
+ * @license LGPL-3.0+
  */
 
 namespace Contao;
@@ -13,7 +14,7 @@ namespace Contao;
  * Class XTMembersHelper
  *
  * Provide helper methods for xtmembers_fieldeditor
- * @copyright  Helmut Schottmüller 2009-2013
+ * @copyright  Helmut Schottmüller 2009-2015
  * @author     Helmut Schottmüller <https://github.com/hschottm>
  * @package    Controller
  */

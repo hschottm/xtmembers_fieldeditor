@@ -1,35 +1,13 @@
-<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
+<?php
 
 /**
- * TYPOlight webCMS
- * Copyright (C) 2005 Leo Feyer
+ * Contao Open Source CMS
  *
- * This program is free software: you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation, either
- * version 2.1 of the License, or (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public
- * License along with this program. If not, please visit the Free
- * Software Foundation website at http://www.gnu.org/licenses/.
+ * Copyright (c) 2005-2015 Leo Feyer
  *
- * PHP version 5
- * @copyright  Helmut Schottmüller 2008
- * @author     Helmut Schottmüller <helmut.schottmueller@aurealis.de>
- * @package    memberextensions
- * @license    LGPL
- * @filesource
+ * @license LGPL-3.0+
  */
 
-
-/**
- * Fields
- */
 $GLOBALS['TL_LANG']['tl_member_fields']['title']      = array('Title', 'Title of the member field.');
 $GLOBALS['TL_LANG']['tl_member_fields']['author']      = array('Author', 'Please enter the author\'s name and an optional e-mail address (e.g. <em>Name &lt;e-mail@address.com&gt;</em>).');
 $GLOBALS['TL_LANG']['tl_member_fields']['copyright']      = array('Copyright', 'Please enter the copyright notice (e.g. <em>Name 2009</em>).');
@@ -61,11 +39,11 @@ $GLOBALS['TL_LANG']['tl_member_fields']['show']   = array('Member field details'
 $GLOBALS['TL_LANG']['tl_member_fields']['edit']   = array('Edit member field', 'Edit member field ID %s');
 $GLOBALS['TL_LANG']['tl_member_fields']['copy']   = array('Duplicate member field', 'Duplicate member field ID %s');
 $GLOBALS['TL_LANG']['tl_member_fields']['delete'] = array('Delete member field', 'Delete member field ID %s');
-$GLOBALS['TL_LANG']['tl_member_fields']['export']      = 'Export fields as TYPOlight extension';
+$GLOBALS['TL_LANG']['tl_member_fields']['export']      = 'Export fields as Contao extension';
 $GLOBALS['TL_LANG']['tl_member_fields']['exportCmd']      = 'Export';
 $GLOBALS['TL_LANG']['tl_member_fields']['select_value']      = 'Value';
 $GLOBALS['TL_LANG']['tl_member_fields']['select_text']      = 'Description';
-$GLOBALS['TL_LANG']['tl_member_fields']['extensionName']      = array('Name of the TYPOlight extension', 'Please enter the name of the TYPOlight extension that should contain the new member fields. Please make sure that you do not use an existing extension name.');
+$GLOBALS['TL_LANG']['tl_member_fields']['extensionName']      = array('Name of the Contao extension', 'Please enter the name of the Contao extension that should contain the new member fields. Please make sure that you do not use an existing extension name.');
 $GLOBALS['TL_LANG']['tl_member_fields']['deliverAsZip'] = array('Deliver as ZIP file', 'Check here if you want to deliver the extension compressed in a ZIP file.');
 $GLOBALS['TL_LANG']['tl_member_fields']['availableFields'] = array('Available member fields', 'Select the member fields that you want to integrate in your extension.');
 $GLOBALS['TL_LANG']['tl_member_fields']['size']           = array('Rows and columns', 'The number of rows and columns of the textarea.');
